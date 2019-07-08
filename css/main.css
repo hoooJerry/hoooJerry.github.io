@@ -180,7 +180,7 @@ th {
   padding: 0;
 }
 ::selection {
-  background: #f8e3a4e6;
+  background: #262a30;
   color: #fff;
 }
 body {
@@ -1047,7 +1047,7 @@ pre .javascript .function {
 .pagination {
   margin: 120px 0 40px;
   text-align: center;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #414141;
 }
 .page-number-basic,
 .pagination .prev,
@@ -2188,7 +2188,7 @@ background
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8cfe21;
+  background: #47d59c;
 }
 .links-of-blogroll {
   font-size: 13px;
