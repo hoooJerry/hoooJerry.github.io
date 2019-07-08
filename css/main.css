@@ -2127,7 +2127,7 @@ background
 .site-state-item {
   display: inline-block;
   padding: 0 15px;
-  border-left: 1px solid #414141;
+  border-left: 1px solid #928e8e17;
 }
 .site-state-item:first-child {
   border-left: none;
