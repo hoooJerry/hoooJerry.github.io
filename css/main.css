@@ -180,7 +180,7 @@ th {
   padding: 0;
 }
 ::selection {
-  background: #f6b288de;
+  background: rgba(246,178,136,0.871);
   color: #fff;
 }
 body {
@@ -206,25 +206,50 @@ body {
     font-size: 16px;
   }
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
+h1 {
+  border-left: 4px solid rgba(244,66,66,0.82);
+  margin-left: -49px;
+  padding-left: 38px;
   font-weight: bold;
   line-height: 1.5;
   font-family: 思源黑体 CN Light, "Helvetica Neue","Helvetica Arial","Ink Free","思源黑体 CN Light","Lobster Two","PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
-h1,
-h2,
-h3,
-h4,
+h1.post-title {
+  border-left: 0px;
+  font-family: 思源黑体 CN Light, "Helvetica Neue","Helvetica Arial","Ink Free","思源黑体 CN Light","Lobster Two","PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+h2 {
+  border-left: 4px solid #a773c3;
+  margin-left: -49px;
+  padding-left: 38px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: 思源黑体 CN Light, "Helvetica Neue","Helvetica Arial","Ink Free","思源黑体 CN Light","Lobster Two","PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+h3 {
+  border-left: 4px solid #b2d3be;
+  margin-left: -49px;
+  padding-left: 38px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: 思源黑体 CN Light, "Helvetica Neue","Helvetica Arial","Ink Free","思源黑体 CN Light","Lobster Two","PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+h4 {
+  border-left: 4px solid #d3f6f3;
+  margin-left: -49px;
+  padding-left: 38px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: 思源黑体 CN Light, "Helvetica Neue","Helvetica Arial","Ink Free","思源黑体 CN Light","Lobster Two","PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
 h5,
 h6 {
-  margin: 20px 0 15px;
+  border-left: 4px solid #ffd5be;
+  margin-left: -49px;
+  padding-left: 38px;
+  font-weight: bold;
+  font-family: 思源黑体 CN Light, "Helvetica Neue","Helvetica Arial","Ink Free","思源黑体 CN Light","Lobster Two","PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.5;
 }
 h1 {
   font-size: 22px;
@@ -616,7 +641,7 @@ pre code {
   padding-right: 10px;
   color: #a0a0a0;
   text-align: right;
-  background-color: #000;
+  background-color: #414141;
 }
 .highlight .code pre {
   width: 100%;
@@ -1013,7 +1038,7 @@ pre .javascript .function {
   font-size: 14px;
   color: #555;
   background: rgba(255,255,255,0.5);
-  border: 1px solid #e1e1e1db;
+  border: 1px solid rgba(225,225,225,0.859);
   text-decoration: none;
   border-radius: 2px;
   transition-property: background-color;
@@ -1196,8 +1221,8 @@ body {
 .headband {
   height: 490px;
 background
-  animation: myfirst 10s;
-  -webkit-animation: myfirst 10s; /* Safari 与 Chrome */
+  animation: myfirst 20s;
+  -webkit-animation: myfirst 20s; /* Safari 与 Chrome */
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -1206,10 +1231,10 @@ background
 }
 @-moz-keyframes myfirst {
   0% {
-    background: #b0f4e6;
+    background: #07caaf;
   }
   25% {
-    background: #ff9776;
+    background: #eadca6;
   }
   50% {
     background: #f36886;
@@ -1223,10 +1248,10 @@ background
 }
 @-webkit-keyframes myfirst {
   0% {
-    background: #b0f4e6;
+    background: #07caaf;
   }
   25% {
-    background: #ff9776;
+    background: #eadca6;
   }
   50% {
     background: #f36886;
@@ -1240,10 +1265,10 @@ background
 }
 @-o-keyframes myfirst {
   0% {
-    background: #b0f4e6;
+    background: #07caaf;
   }
   25% {
-    background: #ff9776;
+    background: #eadca6;
   }
   50% {
     background: #f36886;
@@ -1257,10 +1282,10 @@ background
 }
 @keyframes myfirst {
   0% {
-    background: #b0f4e6;
+    background: #07caaf;
   }
   25% {
-    background: #ff9776;
+    background: #eadca6;
   }
   50% {
     background: #f36886;
@@ -2006,6 +2031,58 @@ background
 .rtl.post-title {
   font-family: UKIJ Ekran;
 }
+.my_post_copyright {
+  width: 95%;
+  max-width: 50em;
+  margin: 2.8em auto 0;
+  padding: 0.5em 1em;
+  border: 1px solid #d3d3d3;
+  font-size: 0.93rem;
+  line-height: 1.6em;
+  word-break: break-all;
+  background: rgba(255,255,255,0.4);
+  border-left: 4px solid #f6782f;
+}
+.my_post_copyright p {
+  margin: 0;
+}
+.my_post_copyright span {
+  display: inline-block;
+  width: 5.2em;
+  color: #f6782f;
+  font-weight: bold;
+}
+.my_post_copyright .raw {
+  margin-left: 1em;
+  width: 5em;
+}
+.my_post_copyright a {
+  color: #808080;
+  border-bottom: 0;
+}
+.my_post_copyright a:hover {
+  color: #a3d2a3;
+  text-decoration: underline;
+}
+.my_post_copyright:hover .fa-clipboard {
+  color: #f6782f;
+}
+.my_post_copyright .post-url:hover {
+  font-weight: normal;
+}
+.my_post_copyright .copy-path {
+  margin-left: 1em;
+  width: 1em;
+}
+@media (max-width: 767px) {
+  .my_post_copyright .copy-path {
+    display: none;
+  }
+}
+.my_post_copyright .copy-path:hover {
+  color: #808080;
+  cursor: pointer;
+}
 .reading-progress-bar {
   position: fixed;
   top: 0;
@@ -2127,7 +2204,7 @@ background
 .site-state-item {
   display: inline-block;
   padding: 0 15px;
-  border-left: 1px solid #928e8e17;
+  border-left: 1px solid rgba(65,65,65,0.18);
 }
 .site-state-item:first-child {
   border-left: none;
@@ -2188,7 +2265,7 @@ background
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #47d59c;
+  background: #86d4ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3396,6 +3473,7 @@ ul.breadcrumb li+li:last-child {
 .post-body h1 {
   font-size: 1.6em;
   border-bottom: 1px solid #eee;
+  border-left: 2px solid rgba(244,66,66,0.82);
 }
 .post-body h1 code {
   font-size: 1em;
@@ -3403,6 +3481,7 @@ ul.breadcrumb li+li:last-child {
 .post-body h2 {
   font-size: 1.45em;
   border-bottom: 1px solid #eee;
+  border-left: 4px solid #a773c3;
 }
 .post-body h2 code {
   font-size: 1em;
@@ -3410,24 +3489,28 @@ ul.breadcrumb li+li:last-child {
 .post-body h3 {
   font-size: 1.3em;
   border-bottom: 1px dotted #eee;
+  border-left: 4px solid #b2d3be;
 }
 .post-body h3 code {
   font-size: 1em;
 }
 .post-body h4 {
   font-size: 1.2em;
+  border-left: 4px solid #d3f6f3;
 }
 .post-body h4 code {
   font-size: 1em;
 }
 .post-body h5 {
   font-size: 1.07em;
+  border-left: 4px solid #ffd5be;
 }
 .post-body h5 code {
   font-size: 1em;
 }
 .post-body h6 {
   font-size: 1.03em;
+  border-left: 4px solid #ffd5be;
 }
 .post-body h6 code {
   font-size: 1em;
@@ -3519,50 +3602,4 @@ pre {
 }
 .site-meta {
   background: #fff;
-}
-.my_post_copyright {
-  width: 95%;
-  max-width: 50em;
-  margin: 2.8em auto 0;
-  padding: 0.5em 1.0em;
-  border: 1px solid #d3d3d3;
-  font-size: 0.93rem;
-  line-height: 1.6em;
-  word-break: break-all;
-  background: rgba(255,255,255,0.4);
-  border-left: 4px solid #f6782f;
-}
-.my_post_copyright p{margin:0;}
-.my_post_copyright span {
-  display: inline-block;
-  width: 5.2em;
-  color: #f6782f;
-  font-weight: bold;
-}
-.my_post_copyright .raw {
-  margin-left: 1em;
-  width: 5em;
-}
-.my_post_copyright a {
-  color: #808080;
-  border-bottom:0;
-}
-.my_post_copyright a:hover {
-  color: #a3d2a3;
-  text-decoration: underline;
-}
-.my_post_copyright:hover .fa-clipboard {
-  color: #f6782f;
-}
-.my_post_copyright .post-url:hover {
-  font-weight: normal;
-}
-.my_post_copyright .copy-path {
-  margin-left: 1em;
-  width: 1em;
-  +mobile(){display:none;}
-}
-.my_post_copyright .copy-path:hover {
-  color: #808080;
-  cursor: pointer;
 }
