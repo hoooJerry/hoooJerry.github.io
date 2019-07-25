@@ -172,7 +172,12 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5bcln7dflj30kb06u74a.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5bvhqxm8rg30y20b8mxu.gif">
-<meta property="og:updated_time" content="2019-07-25T03:43:07.744Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5c5b4u4rgj30k502mt8l.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5c5cylve6j30i002ldfq.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5c6kgip3yj30mm01iq2t.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5c6p84k91j30mr01l3ye.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5c8b4xxweg30y20gw0u0.gif">
+<meta property="og:updated_time" content="2019-07-25T09:49:55.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js学习笔记(一)">
 <meta name="twitter:description" content="Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。  Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。">
@@ -517,7 +522,7 @@ Curious Passionate  Dream-Chaser Hacker</h>
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-25 11:43:07" itemprop="dateModified" datetime="2019-07-25T11:43:07+08:00">2019-07-25</time>
+                <time title="修改时间：2019-07-25 17:49:55" itemprop="dateModified" datetime="2019-07-25T17:49:55+08:00">2019-07-25</time>
               
             
           </span>
@@ -543,7 +548,7 @@ Curious Passionate  Dream-Chaser Hacker</h>
               <i class="fa fa-file-word-o"></i>
             </span>
    <span title="post.wordcount">本文大约
-     669 字
+     2.4k 字
 </span>
 
           
@@ -600,6 +605,96 @@ Curious Passionate  Dream-Chaser Hacker</h>
 <p>Node中的JavaScript可以具备文件操作能力，得益于丰富的API。</p>
 <p>引入核心模块<code>fs</code>，调用相应的API即可实现</p>
 <div class="tabs" id="tabs标签列表"><ul class="nav-tabs"><li class="tab active"><a href="#tabs标签列表-1">黑马程序员</a></li><li class="tab"><a href="#tabs标签列表-2">实验楼</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tabs标签列表-1"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)<span class="comment">//用require方法创建实例</span></span><br><span class="line">fs.writeFile(<span class="string">'./hello.md'</span>,<span class="string">'写入一段文本'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="keyword">var</span> server = http.createServer()</span><br><span class="line">server.on(<span class="string">'request'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'收到请求:'</span>+request.url)</span><br><span class="line">    response.write(<span class="string">'hello'</span>)</span><br><span class="line">    response.end()</span><br><span class="line">&#125;)</span><br><span class="line">server.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'启动咯'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tabs标签列表-2"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">    response.writeHead(<span class="number">200</span>,&#123;<span class="string">'Content-Type'</span>:<span class="string">'text/plain'</span>&#125;);</span><br><span class="line">    response.end(<span class="string">'hello world'</span>);</span><br><span class="line">&#125;).listen(<span class="number">8080</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'开启咯'</span>)</span><br></pre></td></tr></table></figure></div></div></div>
+<h1 id="nodejs包"><a class="markdownIt-Anchor" href="#nodejs包"></a> Node.js包</h1>
+<p>用于管理多个模块及其依赖关系，可以对多个模块进行封装，包的根目录必须包含 package.json 文件，package.json 文件是 CommonJS 规范用于描述包的文件，符合 CommonJS 规范的 package.json 文件一般包含以下字段：</p>
+<ol>
+<li>name：包名。包名是唯一的，只能包含小写字母、数字和下划线。</li>
+<li>version：包版本号。</li>
+<li>description：包说明。</li>
+<li>keywords：关键字数组，用于搜索。</li>
+<li>homepage：项目主页。</li>
+<li>bugs：提交 bug 的地址。</li>
+<li>license：许可证。</li>
+<li>maintainers：维护者数组。</li>
+<li>contributors：贡献者数组。</li>
+<li>repositories：项目仓库托管地址数组。</li>
+<li>dependencies：包依赖。</li>
+</ol>
+<blockquote>
+<p>packae.json包示例</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"shiyanlou"</span>,</span><br><span class="line">    <span class="attr">"description"</span>: <span class="string">"Shiyanlou test package."</span>,</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"0.1.0"</span>,</span><br><span class="line">    <span class="attr">"keywords"</span>: [</span><br><span class="line">        <span class="string">"shiyanlou"</span>,</span><br><span class="line">        <span class="string">"nodejs"</span></span><br><span class="line">     ],</span><br><span class="line">    <span class="attr">"maintainers"</span>: [&#123;</span><br><span class="line">        <span class="attr">"name"</span>: <span class="string">"test"</span>,</span><br><span class="line">        <span class="attr">"email"</span>: <span class="string">"test@shiyanlou.com"</span></span><br><span class="line">    &#125;],</span><br><span class="line">    <span class="attr">"contributors"</span>: [&#123;</span><br><span class="line">        <span class="attr">"name"</span>: <span class="string">"test"</span>,</span><br><span class="line">        <span class="attr">"web"</span>: <span class="string">"http://www.shiyanlou.com/"</span></span><br><span class="line">    &#125;],</span><br><span class="line">    <span class="attr">"bugs"</span>: &#123;</span><br><span class="line">        <span class="attr">"mail"</span>: <span class="string">"test@shiyanlou.com"</span>,</span><br><span class="line">        <span class="attr">"web"</span>: <span class="string">"http://www.shiyanlou.com/"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"licenses"</span>: [&#123;</span><br><span class="line">        <span class="attr">"type"</span>: <span class="string">"Apache License v2"</span>,</span><br><span class="line">        <span class="attr">"url"</span>: <span class="string">"http://www.apache.org/licenses/apache2.html"</span></span><br><span class="line">    &#125;],</span><br><span class="line">    <span class="attr">"repositories"</span>: [&#123;</span><br><span class="line">        <span class="attr">"type"</span>: <span class="string">"git"</span>,</span><br><span class="line">        <span class="attr">"url"</span>: <span class="string">"http://github.com/test/test.git"</span></span><br><span class="line">    &#125;],</span><br><span class="line">    <span class="attr">"dependencies"</span>: &#123; </span><br><span class="line">        <span class="attr">"webkit"</span>: <span class="string">"1.2"</span>,</span><br><span class="line">        <span class="attr">"ssl"</span>: &#123; </span><br><span class="line">            <span class="attr">"gnutls"</span>: [<span class="string">"1.0"</span>, <span class="string">"2.0"</span>],</span><br><span class="line">            <span class="attr">"openssl"</span>: <span class="string">"0.9.8"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：<br>
+package.json 文件可以自己手动编辑，还可以通过 npm init 命令进行生成。你可以自己尝试在终端中输入 npm init 命令来生成一个包含 package.json 文件的包。直接输入 npm init --yes 跳过回答问题步骤，直接生成默认值的 package.json 文件。</p>
+</blockquote>
+<p><mark>安装包</mark><br>
+<code>npm install express</code></p>
+<p><mark>更新包</mark><br>
+<code>npm update express</code></p>
+<p><mark>删除包</mark><br>
+<code>npm uninstall express</code></p>
+<h1 id="nodejs模块"><a class="markdownIt-Anchor" href="#nodejs模块"></a> Node.js模块</h1>
+<p>在 JavaScript 中，我们通常把 JavaScript 代码分为几个 js 文件，然后在浏览器中将这些 js 文件合并运行，但是在 Node.js 中，是通过以模块为单位来划分所有功能的，每一个模块为一个 js 文件，每一个模块中定义的全局变量和函数的作用范围也被限定在这个模块之内，只有使用 <strong>exports 对象</strong>才能传递到外部使用。</p>
+<p>▶1.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hello'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports.foo = foo;<span class="comment">//用module.exports导出,也可以直接exports导出</span></span><br></pre></td></tr></table></figure>
+<p>▶2.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hello = <span class="built_in">require</span>(<span class="string">'./1.js'</span>);</span><br><span class="line">hello.foo();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>require 加载模块</strong>，以’/’ 为前缀的模块是文件的绝对路径。’./’ 为前缀的模块是相对于调用 require() 的文件的，上面的例子中 index.js 和 myModule.js 是在同一个目录下（project 目录）。当没有以 ‘/’、’./’ 或 ‘…/’ 开头来表示文件时，这个模块必须是一个核心模块或加载自 node_modules 目录。</p>
+</blockquote>
+<p><strong><span class="label warning">module.exports 和 exports 的区别</span></strong></p>
+<p>每次导出接口成员的时候都通过 <a href="http://module.exports.xxx" target="_blank" rel="noopener">module.exports.xxx</a> = xxx 的方式很麻烦。所以，Node.js 为了简化你的操作，专门提供了一个变量：exports 等于 module.exports。也就是说在模块中还有这么一句代码：<br>
+<code>var exports = module.exports;</code></p>
+<p>让我们看一下它们</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;</span><br><span class="line">    b:<span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">module</span>.exports);</span><br><span class="line"><span class="built_in">console</span>.log(exports == <span class="built_in">module</span>.exports)</span><br><span class="line"><span class="built_in">console</span>.log(exports === <span class="built_in">module</span>.exports)</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br>
+<img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5c5b4u4rgj30k502mt8l.jpg" alt=""></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">exports = &#123;</span><br><span class="line">    b:<span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(exports);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">module</span>.exports);</span><br><span class="line"><span class="built_in">console</span>.log(exports == <span class="built_in">module</span>.exports)</span><br><span class="line"><span class="built_in">console</span>.log(exports === <span class="built_in">module</span>.exports)</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br>
+<img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5c5cylve6j30i002ldfq.jpg" alt=""></p>
+<p>也就是说给 exports 赋值会断开和 module.exports 之间的引用，同样的给 module.exports 重新赋值也会断开它们之间的引用。但是最终导出的是 module.exports。而如果给其他变量赋值则没有对exports 和 module.exports之间的引用造成改变。</p>
+<p><strong>总结：</strong><br>
+require 得到的是 module.exports 导出的值，导出多个成员可以用 module.exports 和 exports,导出单个成员只能用 module.exports。</p>
+<h1 id="nodejs函数"><a class="markdownIt-Anchor" href="#nodejs函数"></a> Node.js函数</h1>
+<p>在 JavaScript 中，一个函数可以作为另一个函数的参数。我们可以先定义一个函数，然后把函数作为变量在另一个函数中传递，也可以在传递参数的地方直接定义函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHi</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">execute</span>(<span class="params">someFunction,value</span>)</span>&#123;</span><br><span class="line">    someFunction(value);</span><br><span class="line">&#125;</span><br><span class="line">execute(sayHi,<span class="string">'hi'</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="匿名函数"><a class="markdownIt-Anchor" href="#匿名函数"></a> 匿名函数</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="箭头函数"><a class="markdownIt-Anchor" href="#箭头函数"></a> 箭头函数</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(参数<span class="number">1</span>, 参数<span class="number">2</span>, …, 参数N) =&gt; &#123; 函数声明 &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//相当于：(参数1, 参数2, …, 参数N) =&gt;&#123; return 表达式; &#125;</span></span><br><span class="line">(参数<span class="number">1</span>, 参数<span class="number">2</span>, …, 参数N) =&gt; 表达式（单一）</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当只有一个参数时，圆括号是可选的</span></span><br><span class="line">(单一参数) =&gt; &#123;函数声明&#125;</span><br><span class="line">单一参数 =&gt; &#123;函数声明&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 没有参数的函数应该写成一对圆括号。</span></span><br><span class="line">() =&gt; &#123;函数声明&#125;</span><br></pre></td></tr></table></figure>
+<p>示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hello syl'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//上面的匿名函数可以用箭头函数改写为下面的</span></span><br><span class="line"><span class="keyword">var</span> fun = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'hello syl'</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="nodejs-异步编程"><a class="markdownIt-Anchor" href="#nodejs-异步编程"></a> Node.js 异步编程</h2>
+<p>Node.js 异步编程的直接体现就是<strong>回调</strong>。回调函数在完成任务后就会被调用，Node.js 使用了大量的回调函数，Node.js 所有 API 都支持回调函数。回调函数一般作为函数的最后一个参数出现。</p>
+<h3 id="阻塞代码"><a class="markdownIt-Anchor" href="#阻塞代码"></a> 阻塞代码</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> data = fs.readFileSync(<span class="string">'1.txt'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(data.toString());</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'end'</span>)</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br>
+<img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5c6kgip3yj30mm01iq2t.jpg" alt=""></p>
+<h3 id="非阻塞代码"><a class="markdownIt-Anchor" href="#非阻塞代码"></a> 非阻塞代码</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line">fs.readFile(<span class="string">'1.txt'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">err,data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.error(err);</span><br><span class="line">    <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'end'</span>);</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br>
+<img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5c6p84k91j30mr01l3ye.jpg" alt=""></p>
+<p>第一个实例在文件读取完后才执行完程序。 第二个实例我们不需要等待文件读取完，这样就可以在读取文件时同时执行接下来的代码，大大提高了程序的性能。</p>
+<h1 id="nodejs事件"><a class="markdownIt-Anchor" href="#nodejs事件"></a> Node.js事件</h1>
+<p>大多数 Node.js 核心 API 构建于惯用的异步事件驱动架构，其中某些类型的对象（又称触发器，Emitter）会触发命名事件来调用函数（又称监听器，Listener）。比如：fs.readStream 打开文件时会发出一个事件。可以通过 require(“events”); 获得 event 模块。通常，事件名采用“驼峰式”(即单词首字母大写，其他字母小写)命名方式。</p>
+<h2 id="eventemitter"><a class="markdownIt-Anchor" href="#eventemitter"></a> EventEmitter</h2>
+<p>所有能触发事件的对象都是 EventEmitter 类的实例。这些对象有一个 eventEmitter.on() 函数，用于将一个或多个函数绑定到命名事件上。当 EventEmitter 对象触发一个事件时，所有绑定在该事件上的函数都会被同步地调用。<br>
+** EventEmitter类获取**</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入 events 模块</span></span><br><span class="line"><span class="keyword">var</span> events = <span class="built_in">require</span>(<span class="string">'events'</span>);</span><br><span class="line"><span class="comment">// 创建 eventEmitter 对象</span></span><br><span class="line"><span class="keyword">var</span> eventEmitter = <span class="keyword">new</span> events.EventEmitter();</span><br></pre></td></tr></table></figure>
+<h3 id="添加监听器"><a class="markdownIt-Anchor" href="#添加监听器"></a> 添加监听器</h3>
+<p><code>emitter.on(eventName, listener)</code><br>
+使用 emitter.on(eventName, listener) 方法为指定事件注册一个监听器。添加 listener 函数到名为 eventName 的事件的监听器数组的末尾。</p>
+<p><strong>参数说明：</strong></p>
+<ul>
+<li>eventName：事件名称，string 类型。</li>
+<li>listener：回调函数。<br>
+<strong>示例</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入 events 模块</span></span><br><span class="line"><span class="keyword">var</span> events = <span class="built_in">require</span>(<span class="string">'events'</span>);</span><br><span class="line"><span class="comment">// 创建 emitter 对象</span></span><br><span class="line"><span class="keyword">var</span> emitter = <span class="keyword">new</span> events.EventEmitter();</span><br><span class="line"><span class="comment">//为 connection 事件注册一个监听器</span></span><br><span class="line">emitter.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'已连接'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//一秒后调用监听器</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    emitter.emit(<span class="string">'connection'</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br>
+<img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5c8b4xxweg30y20gw0u0.gif" alt=""></p>
+<p>其原理是<code>emitter</code>对象给<code>connection</code>事件注册了监听器，用<strong>setTimeout</strong>函数1000毫秒后向<code>emitter</code>对象发送事件<code>connection</code>，此时调用它的监听器。<code>emit</code>方法就是发送事件的。</p>
 
       
     </div>
@@ -622,7 +717,7 @@ Curious Passionate  Dream-Chaser Hacker</h>
   <p><span>本文标题:</span><a href="/2019/07/24/Node-js学习笔记-一/">Node.js学习笔记(一)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Hooo Jerry 的个人博客">Hooo Jerry</a></p>
   <p><span>发布时间:</span>2019年07月24日 - 22:50</p>
-  <p><span>最后更新:</span>2019年07月25日 - 11:43</p>
+  <p><span>最后更新:</span>2019年07月25日 - 17:49</p>
   <p><span>原始链接:</span><a href="/2019/07/24/Node-js学习笔记-一/" title="Node.js学习笔记(一)">http://hoooJerry.com/2019/07/24/Node-js学习笔记-一/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://hoooJerry.com/2019/07/24/Node-js学习笔记-一/" aria-label="复制成功！"></i></span>
   </p>
@@ -872,7 +967,7 @@ Curious Passionate  Dream-Chaser Hacker</h>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs适用场景"><span class="nav-number">1.</span> <span class="nav-text"> Node.js适用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局对象"><span class="nav-number">2.</span> <span class="nav-text"> 全局对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局变量"><span class="nav-number">2.1.</span> <span class="nav-text"> 全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见全局变量和全局函数"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 常见全局变量和全局函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#require方法创建hello-world"><span class="nav-number">3.</span> <span class="nav-text"> require方法–创建hello world</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs适用场景"><span class="nav-number">1.</span> <span class="nav-text"> Node.js适用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局对象"><span class="nav-number">2.</span> <span class="nav-text"> 全局对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局变量"><span class="nav-number">2.1.</span> <span class="nav-text"> 全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见全局变量和全局函数"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 常见全局变量和全局函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#require方法创建hello-world"><span class="nav-number">3.</span> <span class="nav-text"> require方法–创建hello world</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs包"><span class="nav-number">4.</span> <span class="nav-text"> Node.js包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs模块"><span class="nav-number">5.</span> <span class="nav-text"> Node.js模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs函数"><span class="nav-number">6.</span> <span class="nav-text"> Node.js函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名函数"><span class="nav-number">6.1.</span> <span class="nav-text"> 匿名函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#箭头函数"><span class="nav-number">6.1.1.</span> <span class="nav-text"> 箭头函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs-异步编程"><span class="nav-number">6.2.</span> <span class="nav-text"> Node.js 异步编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞代码"><span class="nav-number">6.2.1.</span> <span class="nav-text"> 阻塞代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞代码"><span class="nav-number">6.2.2.</span> <span class="nav-text"> 非阻塞代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs事件"><span class="nav-number">7.</span> <span class="nav-text"> Node.js事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eventemitter"><span class="nav-number">7.1.</span> <span class="nav-text"> EventEmitter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加监听器"><span class="nav-number">7.1.1.</span> <span class="nav-text"> 添加监听器</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -917,7 +1012,7 @@ Curious Passionate  Dream-Chaser Hacker</h>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.4k字</span>
+  <span class="post-count">博客全站共12.1k字</span>
 </div></div>
         
 <div class="busuanzi-count">
