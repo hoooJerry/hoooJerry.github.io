@@ -163,23 +163,27 @@
 
 
 
-  <meta name="description" content="愿你在冷铁卷刃前，得以窥见天光">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HoooJerry">
-<meta property="og:url" content="http://hoooJerry.com/categories/随笔/index.html">
+  <meta name="description" content="Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。  Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js学习笔记(一)">
+<meta property="og:url" content="http://hoooJerry.com/2019/07/24/Node-js学习笔记-一/index.html">
 <meta property="og:site_name" content="HoooJerry">
-<meta property="og:description" content="愿你在冷铁卷刃前，得以窥见天光">
+<meta property="og:description" content="Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。  Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5bcln7dflj30kb06u74a.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5bvhqxm8rg30y20b8mxu.gif">
+<meta property="og:updated_time" content="2019-07-25T03:43:07.744Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HoooJerry">
-<meta name="twitter:description" content="愿你在冷铁卷刃前，得以窥见天光">
+<meta name="twitter:title" content="Node.js学习笔记(一)">
+<meta name="twitter:description" content="Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。  Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5bcln7dflj30kb06u74a.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://hoooJerry.com/categories/随笔/">
+  <link rel="canonical" href="http://hoooJerry.com/2019/07/24/Node-js学习笔记-一/">
 
 
 
@@ -189,7 +193,7 @@
   };
 </script>
 
-  <title>分类: 随笔 | HoooJerry</title>
+  <title>Node.js学习笔记(一) | HoooJerry</title>
   
 
 
@@ -238,7 +242,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband">
     <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 600 90" style="enable-background:new 0 0 600 600;height=90px" xml:space="preserve" class="bayleyssvg">
    <path id="bayleys" stroke-dasharray="1200 1000" d="M.5,30.4H68.42V40.81H.5Z M120.2,2,119,4q10.06,16.24,29.68,26.79-4.08,5.49-6.68,9.5-19.41-11-28.34-27-8.79,15.18-28.48,27.91-2-3.24-6.53-9.28Q98.9,19.64,109.3,2Zm-12,25.59h10.75V70.41H108.18Z M180.35,70.13H170.22v-31a105.72,105.72,0,0,1-10,9q-1.12-5.7-2.39-11a79.78,79.78,0,0,0,17-20H158.48V8.39h20.81A81.51,81.51,0,0,0,182.1.66l11.11,1.69q-1.16,3.09-2.46,6h36.42v8.79H186.39c-.94,1.76-1.93,3.47-3,5.14h37.09v38.1q0,4.39-2.11,6.77a8.6,8.6,0,0,1-5.87,2.73q-3.76.35-14.66.35a68.38,68.38,0,0,0-2.74-9.63q6,.34,11.25.35c2.67,0,4-1.32,4-3.94v-1.2h-30Zm30-39.59h-30v5.13h30Zm-30,17.79h30V43.2h-30Z M262.36,33.35H257.3v6.33h5.13v6.86l1.9-.14V11.49h-2v-7h25v3.3H305q-.68,17.76-4.71,30.76l6.75,14.31-7.32,3.8q-1.26-3.14-3.41-8.16a50.12,50.12,0,0,1-6.5,10.06,82.66,82.66,0,0,0-5.13-6.68.24.24,0,0,1-.14,0v7.21H277V52.83q-6.64.89-15,2.18l-1-7.17H257.3v9.6a30.67,30.67,0,0,0,12.58,2.35q22.78,0,37.06-.21Q305.11,65,304.05,69q-29.1,0-36.81-.3a37.06,37.06,0,0,1-13-2.53,21.47,21.47,0,0,1-8.58-6.38,51.16,51.16,0,0,1-2.32,10.9,91,91,0,0,0-6.47-6.75q3.1-9.42,3-27.49h6.61c.07,3.44.07,6.68,0,9.7a23.16,23.16,0,0,0,2.88,5V33.35H238V25.06h9.28V18h-7.73V9.73h7.73V1.08h8.37V9.73h5.83V18h-5.83v7h6.75Zm9.56-15H277V11.49h-5.06Zm0,13.29H277V24.78h-5.06ZM277,45.13V38h-5.06v7.69ZM290.83,18.8l4.5,9.32a84.79,84.79,0,0,0,1.9-12.27H286.69V11.49h-2.11v10ZM292,38.45l-7.45-16.8V44.11l2.95-.42c-.07,1.17-.12,2.32-.14,3.45A48.46,48.46,0,0,0,292,38.45Z M329.25,1.29l10.48,1.62-3.16,9.56h11.95V26.18q5.66-9.49,10.83-25l9.7,2.53q-1.55,4.68-3.3,9.14h18.14l-.81,40.47q-.18,6.54-1.09,9.16a9.71,9.71,0,0,1-2.85,4.27,11.1,11.1,0,0,1-5.4,2.25q-3.47.6-15.1.6A60.72,60.72,0,0,0,356,59q5.2.42,11.08.42A9.67,9.67,0,0,0,370,59a4.9,4.9,0,0,0,2-1.17A4.17,4.17,0,0,0,373.06,56a68.59,68.59,0,0,0,.45-8.65L373.83,33c.09-4.47.14-8.11.14-10.9H361.74c-1.55,3.29-3.19,6.47-4.92,9.57a55.8,55.8,0,0,0-8.3-4.33V69.21h-9.77V64.15h-10v5.49H319V12.47h7.42Q328.43,5.58,329.25,1.29Zm9.5,20.39h-10v12h10Zm-10,33.26h10v-12h-10Zm30.8-24.4a179.67,179.67,0,0,1,10.9,14.7l-8.86,5.9a154.13,154.13,0,0,0-10.2-15Z M425.12,37.57h9.7a40.85,40.85,0,0,1-.7,5q9.24,14.73,31.15,18l-6.33,9.7q-19-5.17-28.37-18.28-7.67,13.53-28.87,18.7a92.09,92.09,0,0,0-6.18-9.42Q423.5,56.63,425.12,37.57ZM458.52,4V35.75H401.28V28.43h47.53V23.37H404V16.2h44.86V11.28h-47V4ZM408.38,37.5a110.64,110.64,0,0,1,10.06,10.62l-7.74,5.55a112.39,112.39,0,0,0-9.42-11Zm51.33,5a154.23,154.23,0,0,1-10.83,11l-7-6.18A140.29,140.29,0,0,0,452.4,36.8Z M496.09,40.25q2.82,8.09,5.49,16A47.78,47.78,0,0,0,511.77,42.5h-2.88v2.81h-8.44V7.2H513.6q1-3.24,1.76-6.61L525.55,2.7Q525,4,523.37,7.2h17.44V42.5H528.58l5,2.17q-1.2,1.77-4.92,7.18c1.4-.05,3.18-.1,5.34-.14-.66-1.32-1.34-2.56-2-3.73l4.78-2q1.83,3,3.59,6.19a46.44,46.44,0,0,0,4.5,1.76,84.53,84.53,0,0,1-1.69,9.28q-1.54,5.89-8.86,5.9h-8.93q-8.58,0-8.58-8.93V52.2A70.85,70.85,0,0,1,500.45,71a97.65,97.65,0,0,0-8-7.31l2-1.41L494,60.78q-8.22.77-12.65,1.4a12.92,12.92,0,0,0-4.22,1.27l-3.1-7.6a14.33,14.33,0,0,0,2.25-4,163.17,163.17,0,0,0,5.21-19.13h-6.89V24.07h24.53v8.65h-8.36q-3,10.34-6.61,21,.63-.07,7.59-.71-1.68-6-3.16-10.76Zm1.13-25.53H476.75V6.21h20.47Zm11.67,6.47h7.31c.09-1.83.16-3.77.21-5.84h-7.52Zm6.61,7.17h-6.61v6h5.62Q515.08,31.59,515.5,28.36Zm9.21,16.88v3.51A56.92,56.92,0,0,0,528,42.5h-6.82c-.33.93-.68,1.85-1.05,2.74Zm7.66-10.9v-6h-8.22q-.36,3.24-.85,6Zm0-19h-7.45q-.07,3-.21,5.84h7.66Zm-4.92,45.43H535c1.27,0,2-.78,2.25-2.32l-.77-1.69q-7.46.42-11.74.84C524.71,59.72,525.62,60.78,527.45,60.78Z"/>
@@ -339,7 +343,7 @@ Curious Passionate  Dream-Chaser Hacker</h>
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -431,83 +435,292 @@ Curious Passionate  Dream-Chaser Hacker</h>
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>随笔<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hoooJerry.com/2019/07/24/Node-js学习笔记-一/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hooo Jerry">
+      <meta itemprop="description" content="愿你在冷铁卷刃前，得以窥见天光">
+      <meta itemprop="image" content="/images/pika.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HoooJerry">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/12/30/写给2018/" itemprop="url">
-              
-                <span itemprop="name">写给二〇一八的年终总结</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Node.js学习笔记(一)
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-30T22:03:07+08:00" content="2018-12-30">
-          12-30
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-24 22:50:01" itemprop="dateCreated datePublished" datetime="2019-07-24T22:50:01+08:00">2019-07-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-25 11:43:07" itemprop="dateModified" datetime="2019-07-25T11:43:07+08:00">2019-07-25</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+              <i class="fa fa-file-word-o"></i>
+            </span>
+   <span title="post.wordcount">本文大约
+     669 字
+</span>
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5bcln7dflj30kb06u74a.jpg" alt=""></p>
+<center>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</center> 
+<center>Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。</center>
+<a id="more"></a>
+<h1 id="nodejs适用场景"><a class="markdownIt-Anchor" href="#nodejs适用场景"></a> Node.js适用场景</h1>
+<p>我们从 Node.js 的特点中可以知道 Node.js 擅长处理 I/O，不善于计算（单线程的缺点），因此 Node.js 适用于：当应用程序需要处理大量并发的 I/O，而在向客户端发出响应之前，应用程序内部并不需要进行非常复杂的处理的时候，Node.js 也非常适合与 web socket 配合，开发长连接的实时交互应用程序。比如：聊天室，博客系统，考试系统等。</p>
+<h1 id="全局对象"><a class="markdownIt-Anchor" href="#全局对象"></a> 全局对象</h1>
+<p>在 JavaScript 中全局对象通常是 window，而在 Node.js 中全局对象是 globa，所有全局变量（除了 global 本身以外）都是 global 对象的属性，我们可以直接访问到 global 的属性</p>
+<h2 id="全局变量"><a class="markdownIt-Anchor" href="#全局变量"></a> 全局变量</h2>
+<p>按照 ECMAScript 的定义，满足以下条 件的变量是全局变量：</p>
+<ul>
+<li>
+<p>在最外层定义的变量</p>
+</li>
+<li>
+<p>全局对象的属性</p>
+</li>
+<li>
+<p>隐式定义的变量（未定义直接赋值的变量）</p>
+</li>
+</ul>
+<blockquote>
+<p>当你定义一个全局变量的时候，这个变量同时也会成为全局对象的属性，反之亦然。在 Node.js 中你不可能在最外层定义变量，因为所有用户代码都是属于当前模块的，而模块本身不是最外层上下文。定义变量一定要使用 var 关键字，因为全局变量会污染命名空间。</p>
+</blockquote>
+<h3 id="常见全局变量和全局函数"><a class="markdownIt-Anchor" href="#常见全局变量和全局函数"></a> 常见全局变量和全局函数</h3>
+<ul>
+<li>__filename 表示当前正在执行的脚本的文件名。它将输出文件所在位置的绝对路径，且和命令行参数所指定的文件名不一定相同。如果在模块中，返回的值是模块文件的路径。</li>
+<li>__dirname，表示当前执行脚本所在的目录。</li>
+<li>setTimeout(cb, ms) 全局函数在指定的毫秒(ms)数后执行指定函数(cb),只执行一次函数。<br>
+<img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5bvhqxm8rg30y20b8mxu.gif" alt=""></li>
+</ul>
+<h1 id="require方法创建hello-world"><a class="markdownIt-Anchor" href="#require方法创建hello-world"></a> require方法–创建hello world</h1>
+<p>Node中的JavaScript可以具备文件操作能力，得益于丰富的API。</p>
+<p>引入核心模块<code>fs</code>，调用相应的API即可实现</p>
+<div class="tabs" id="tabs标签列表"><ul class="nav-tabs"><li class="tab active"><a href="#tabs标签列表-1">黑马程序员</a></li><li class="tab"><a href="#tabs标签列表-2">实验楼</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tabs标签列表-1"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)<span class="comment">//用require方法创建实例</span></span><br><span class="line">fs.writeFile(<span class="string">'./hello.md'</span>,<span class="string">'写入一段文本'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="keyword">var</span> server = http.createServer()</span><br><span class="line">server.on(<span class="string">'request'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'收到请求:'</span>+request.url)</span><br><span class="line">    response.write(<span class="string">'hello'</span>)</span><br><span class="line">    response.end()</span><br><span class="line">&#125;)</span><br><span class="line">server.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'启动咯'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tabs标签列表-2"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">    response.writeHead(<span class="number">200</span>,&#123;<span class="string">'Content-Type'</span>:<span class="string">'text/plain'</span>&#125;);</span><br><span class="line">    response.end(<span class="string">'hello world'</span>);</span><br><span class="line">&#125;).listen(<span class="number">8080</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'开启咯'</span>)</span><br></pre></td></tr></table></figure></div></div></div>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/07/24/Node-js学习笔记-一/">Node.js学习笔记(一)</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Hooo Jerry 的个人博客">Hooo Jerry</a></p>
+  <p><span>发布时间:</span>2019年07月24日 - 22:50</p>
+  <p><span>最后更新:</span>2019年07月25日 - 11:43</p>
+  <p><span>原始链接:</span><a href="/2019/07/24/Node-js学习笔记-一/" title="Node.js学习笔记(一)">http://hoooJerry.com/2019/07/24/Node-js学习笔记-一/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://hoooJerry.com/2019/07/24/Node-js学习笔记-一/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span>除特殊说明外，本博客所有文章均采用<i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0协议</a> 。转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+	});
+    });  
+</script>
+
+      
+</div>
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Hooo Jerry 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/23/海边出游and日式烧烤/" rel="next" title="海边出游&&日式烧烤">
+                <i class="fa fa-chevron-left"></i> 海边出游&&日式烧烤
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -528,8 +741,17 @@ Curious Passionate  Dream-Chaser Hacker</h>
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -639,6 +861,23 @@ Curious Passionate  Dream-Chaser Hacker</h>
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs适用场景"><span class="nav-number">1.</span> <span class="nav-text"> Node.js适用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局对象"><span class="nav-number">2.</span> <span class="nav-text"> 全局对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局变量"><span class="nav-number">2.1.</span> <span class="nav-text"> 全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见全局变量和全局函数"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 常见全局变量和全局函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#require方法创建hello-world"><span class="nav-number">3.</span> <span class="nav-text"> require方法–创建hello world</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -804,6 +1043,10 @@ Curious Passionate  Dream-Chaser Hacker</h>
 
 
   
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 
