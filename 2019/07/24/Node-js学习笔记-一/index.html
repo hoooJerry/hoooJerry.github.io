@@ -176,8 +176,10 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5c5cylve6j30i002ldfq.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5c6kgip3yj30mm01iq2t.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5c6p84k91j30mr01l3ye.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5dkupxxjfj30z70h6ac3.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5c8b4xxweg30y20gw0u0.gif">
-<meta property="og:updated_time" content="2019-07-25T09:49:55.340Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/007dh5vlly1g5dky9oqukj30vg0d0wg2.jpg">
+<meta property="og:updated_time" content="2019-07-26T14:47:38.532Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js学习笔记(一)">
 <meta name="twitter:description" content="Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。  Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。">
@@ -522,7 +524,7 @@ Curious Passionate  Dream-Chaser Hacker</h>
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-25 17:49:55" itemprop="dateModified" datetime="2019-07-25T17:49:55+08:00">2019-07-25</time>
+                <time title="修改时间：2019-07-26 22:47:38" itemprop="dateModified" datetime="2019-07-26T22:47:38+08:00">2019-07-26</time>
               
             
           </span>
@@ -548,7 +550,7 @@ Curious Passionate  Dream-Chaser Hacker</h>
               <i class="fa fa-file-word-o"></i>
             </span>
    <span title="post.wordcount">本文大约
-     2.4k 字
+     3.8k 字
 </span>
 
           
@@ -575,7 +577,8 @@ Curious Passionate  Dream-Chaser Hacker</h>
 <center>Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。</center>
 <a id="more"></a>
 <h1 id="nodejs适用场景"><a class="markdownIt-Anchor" href="#nodejs适用场景"></a> Node.js适用场景</h1>
-<p>我们从 Node.js 的特点中可以知道 Node.js 擅长处理 I/O，不善于计算（单线程的缺点），因此 Node.js 适用于：当应用程序需要处理大量并发的 I/O，而在向客户端发出响应之前，应用程序内部并不需要进行非常复杂的处理的时候，Node.js 也非常适合与 web socket 配合，开发长连接的实时交互应用程序。比如：聊天室，博客系统，考试系统等。</p>
+<p>Node.js 擅长处理 I/O，不善于计算（单线程的缺点），因此 Node.js 适用于：当应用程序需要处理大量并发的 I/O，而在向客户端发出响应之前，应用程序内部并不需要进行非常复杂的处理的时候，Node.js 也非常适合与 web socket 配合，开发长连接的实时交互应用程序。<br>
+比如：聊天室，博客系统，考试系统等。</p>
 <h1 id="全局对象"><a class="markdownIt-Anchor" href="#全局对象"></a> 全局对象</h1>
 <p>在 JavaScript 中全局对象通常是 window，而在 Node.js 中全局对象是 globa，所有全局变量（除了 global 本身以外）都是 global 对象的属性，我们可以直接访问到 global 的属性</p>
 <h2 id="全局变量"><a class="markdownIt-Anchor" href="#全局变量"></a> 全局变量</h2>
@@ -605,6 +608,32 @@ Curious Passionate  Dream-Chaser Hacker</h>
 <p>Node中的JavaScript可以具备文件操作能力，得益于丰富的API。</p>
 <p>引入核心模块<code>fs</code>，调用相应的API即可实现</p>
 <div class="tabs" id="tabs标签列表"><ul class="nav-tabs"><li class="tab active"><a href="#tabs标签列表-1">黑马程序员</a></li><li class="tab"><a href="#tabs标签列表-2">实验楼</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tabs标签列表-1"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)<span class="comment">//用require方法创建实例</span></span><br><span class="line">fs.writeFile(<span class="string">'./hello.md'</span>,<span class="string">'写入一段文本'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="keyword">var</span> server = http.createServer()</span><br><span class="line">server.on(<span class="string">'request'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'收到请求:'</span>+request.url)</span><br><span class="line">    response.write(<span class="string">'hello'</span>)</span><br><span class="line">    response.end()</span><br><span class="line">&#125;)</span><br><span class="line">server.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'启动咯'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tabs标签列表-2"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">    response.writeHead(<span class="number">200</span>,&#123;<span class="string">'Content-Type'</span>:<span class="string">'text/plain'</span>&#125;);</span><br><span class="line">    response.end(<span class="string">'hello world'</span>);</span><br><span class="line">&#125;).listen(<span class="number">8080</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'开启咯'</span>)</span><br></pre></td></tr></table></figure></div></div></div>
+<p><code>http.createServer([requestListener])</code><br>
+其中<code>requestListener 请求函数</code>是一个自动添加到 ‘request’ 事件的函数。函数传递有两个参数：request 请求对象 和 response 响应对象。</p>
+<p><strong>response 对象</strong>常用的方法有：</p>
+<ul>
+<li>
+<p>response.writeHead(statusCode[, statusMessage][, headers])。表示向请求发送响应头。</p>
+</li>
+<li>
+<p>response.write() 发送一块响应主体，也就是说用来给客户端发送响应数据。可以直接写文本信息，也可以写我们的 html 代码，注意要设置 Content-Type 的值 。write 可以使用多次，但是最后一定要使用 end 来结束响应，否则客户端会一直等待。</p>
+</li>
+<li>
+<p>response.end() 此方法向服务器发出信号，表示已发送所有响应头和主体，该服务器应该视为此消息完成。必须在每个响应上调用方法 response.end()。</p>
+</li>
+</ul>
+<p><strong>request</strong>对象的常用方法：</p>
+<ul>
+<li>
+<p>request.url 获取请求路径，获取到的是端口号之后的那一部分路径,也就是说所有的 url 都是以 / 开头的，判断路径处理响应。</p>
+</li>
+<li>
+<p>request.socket.localAddress 获取 ip 地址。</p>
+</li>
+<li>
+<p>request.socket.remotePort 获取源端口。</p>
+</li>
+</ul>
 <h1 id="nodejs包"><a class="markdownIt-Anchor" href="#nodejs包"></a> Node.js包</h1>
 <p>用于管理多个模块及其依赖关系，可以对多个模块进行封装，包的根目录必须包含 package.json 文件，package.json 文件是 CommonJS 规范用于描述包的文件，符合 CommonJS 规范的 package.json 文件一般包含以下字段：</p>
 <ol>
@@ -676,6 +705,41 @@ require 得到的是 module.exports 导出的值，导出多个成员可以用 m
 <p>运行结果：<br>
 <img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5c6p84k91j30mr01l3ye.jpg" alt=""></p>
 <p>第一个实例在文件读取完后才执行完程序。 第二个实例我们不需要等待文件读取完，这样就可以在读取文件时同时执行接下来的代码，大大提高了程序的性能。</p>
+<h3 id="异步打开文件"><a class="markdownIt-Anchor" href="#异步打开文件"></a> 异步打开文件</h3>
+<p><code>fs.open(path, flags[, mode], callback)</code></p>
+<p>参数说明：</p>
+<ul>
+<li>
+<p>path:文件的路径</p>
+</li>
+<li>
+<p>flags：文件打开的行为。</p>
+</li>
+<li>
+<p>mode：设置文件模式(权限)，文件创建默认权限为 0o666（可读写）。mode 设置文件模式（权限和粘滞位），但仅限于创建文件的情况。在 Windows 上，只能操作写权限。</p>
+</li>
+<li>
+<p>callback：回调函数，带有两个参数如：callback(err, fd)。</p>
+</li>
+<li>
+<p>flags 参数可以是以下值：</p>
+</li>
+</ul>
+<blockquote>
+<p>‘a’ - 打开文件用于追加。如果文件不存在，则创建该文件。</p>
+<p>‘ax’ - 与 ‘a’ 相似，但如果路径存在则失败。</p>
+<p>‘a+’ - 打开文件用于读取和追加。如果文件不存在，则创建该文件。</p>
+<p>‘ax+’ - 与 ‘a+’ 相似，但如果路径存在则失败。</p>
+<p>‘as’ - 以同步模式打开文件用于追加。如果文件不存在，则创建该文件。</p>
+<p>‘as+’ - 以同步模式打开文件用于读取和追加。如果文件不存在，则创建该文件。</p>
+<p>‘r’ - 打开文件用于读取。如果文件不存在，则会发生异常。</p>
+<p>‘r+’ - 打开文件用于读取和写入。如果文件不存在，则会发生异常。</p>
+<p>‘rs+’ - 以同步模式打开文件用于读取和写入。指示操作系统绕开本地文件系统缓存。这对于在 NFS 挂载上打开文件非常有用，因为它允许跳过可能过时的本地缓存。 它对 I/O 性能有非常实际的影响，因此除非需要，否则不建议使用此标志。这不会将 fs.open() 或 fsPromises.open() 转换为同步的阻塞调用。 如果需要同步操作，则应使用 fs.openSync() 之类的操作。</p>
+<p>‘w’ - 打开文件用于写入。创建文件（如果它不存在）或截断文件（如果存在）。</p>
+<p>‘wx’ - 与 ‘w’ 相似，但如果路径存在则失败。</p>
+<p>‘w+’ - 打开文件用于读取和写入。创建文件（如果它不存在）或截断文件（如果存在）。</p>
+<p>‘wx+’ - 与 ‘w+’ 相似，但如果路径存在则失败。</p>
+</blockquote>
 <h1 id="nodejs事件"><a class="markdownIt-Anchor" href="#nodejs事件"></a> Node.js事件</h1>
 <p>大多数 Node.js 核心 API 构建于惯用的异步事件驱动架构，其中某些类型的对象（又称触发器，Emitter）会触发命名事件来调用函数（又称监听器，Listener）。比如：fs.readStream 打开文件时会发出一个事件。可以通过 require(“events”); 获得 event 模块。通常，事件名采用“驼峰式”(即单词首字母大写，其他字母小写)命名方式。</p>
 <h2 id="eventemitter"><a class="markdownIt-Anchor" href="#eventemitter"></a> EventEmitter</h2>
@@ -685,6 +749,11 @@ require 得到的是 module.exports 导出的值，导出多个成员可以用 m
 <h3 id="添加监听器"><a class="markdownIt-Anchor" href="#添加监听器"></a> 添加监听器</h3>
 <p><code>emitter.on(eventName, listener)</code><br>
 使用 emitter.on(eventName, listener) 方法为指定事件注册一个监听器。添加 listener 函数到名为 eventName 的事件的监听器数组的末尾。</p>
+<blockquote>
+<p>别名   emitter.addListener(eventName, listener)</p>
+</blockquote>
+<p>注意，<strong>这种注册监听器的方法将监听器一直保留在内存中</strong><br>
+<img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5dkupxxjfj30z70h6ac3.jpg" alt=""></p>
 <p><strong>参数说明：</strong></p>
 <ul>
 <li>eventName：事件名称，string 类型。</li>
@@ -694,7 +763,45 @@ require 得到的是 module.exports 导出的值，导出多个成员可以用 m
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入 events 模块</span></span><br><span class="line"><span class="keyword">var</span> events = <span class="built_in">require</span>(<span class="string">'events'</span>);</span><br><span class="line"><span class="comment">// 创建 emitter 对象</span></span><br><span class="line"><span class="keyword">var</span> emitter = <span class="keyword">new</span> events.EventEmitter();</span><br><span class="line"><span class="comment">//为 connection 事件注册一个监听器</span></span><br><span class="line">emitter.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'已连接'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//一秒后调用监听器</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    emitter.emit(<span class="string">'connection'</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
 <p>运行结果：<br>
 <img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5c8b4xxweg30y20gw0u0.gif" alt=""></p>
-<p>其原理是<code>emitter</code>对象给<code>connection</code>事件注册了监听器，用<strong>setTimeout</strong>函数1000毫秒后向<code>emitter</code>对象发送事件<code>connection</code>，此时调用它的监听器。<code>emit</code>方法就是发送事件的。</p>
+<p>其原理是<code>emitter</code>对象给<code>connection</code>事件注册了监听器，用<strong>setTimeout</strong>函数1000毫秒后向<code>emitter</code>对象发送事件<code>connection</code>，此时调用它的监听器。<code>emit</code>方法就是发送事件的。<br>
+使用<code>emitter.emit(eventName[, ...args])</code>按照监听器注册的顺序，同步地调用每个注册到名为<code>eventName</code>的事件的监听器，并传入提供的参数。如果事件有注册监听返回 <strong>true</strong>，否则返回 <strong>false</strong>。</p>
+<p>参数说明：</p>
+<ul>
+<li>eventName ：事件名称</li>
+<li>args：传递的参数，多个，类型为任意。</li>
+</ul>
+<p>默认情况下，事件监听器会按照添加的顺序依次调用。<code>emitter.prependListener()</code> 方法可用于将事件监听器添加到监听器数组的开头。</p>
+<p>例如在<code>setTimeout</code>前添加，<code>emitter.prependListener('connection',() =&gt;console.log('hh'));</code>，将会先打印<strong>hh</strong>,再打印<strong>已连接</strong>。</p>
+<hr>
+<p><code>eventEmitter.once(eventName, listener)</code></p>
+<p>此可以注册最多可调用一次的监听器。 当事件被触发时，监听器会被注销，然后再调用。<br>
+<img src="http://ww1.sinaimg.cn/large/007dh5vlly1g5dky9oqukj30vg0d0wg2.jpg" alt=""><br>
+而<code>emitter.prependOnceListener()</code> 方法可用于将事件监听器添加到监听器数组的开头。</p>
+<h3 id="移除监听器"><a class="markdownIt-Anchor" href="#移除监听器"></a> 移除监听器</h3>
+<p><code>emitter.removeListener(eventName, listener)</code><br>
+参数说明：</p>
+<ul>
+<li>eventName 事件名称</li>
+<li>listener 监听器也就是回调函数名称。</li>
+</ul>
+<blockquote>
+<p>注：removeListener() 最多只会从监听器数组中移除一个监听器。我们可以多次调用 removeListener() 的方式来一个个的移除我们需要移除掉的监听器。</p>
+</blockquote>
+<blockquote>
+<p>emitter.off(eventName, listener)是emitter.removeListener()的别名</p>
+</blockquote>
+<p><code>emitter.removeAllListeners([eventName])</code><br>
+使用 emitter.removeAllListeners([eventName]) 移除全部监听器或指定的 eventName 事件的监听器。</p>
+<h3 id="设置监听器最大绑定数"><a class="markdownIt-Anchor" href="#设置监听器最大绑定数"></a> 设置监听器最大绑定数</h3>
+<p><code>emitter.setMaxListeners(n)</code><br>
+默认情况下，如果为特定事件添加了超过 10 个监听器，则 EventEmitter 会打印一个警告，这有助于我们发现内存泄露。显然实际编码中并不是所有的事件都要限制 10 个监听器。 emitter.setMaxListeners() 方法可以为指定的 EventEmitter 实例修改限制。当值设为 Infinity（或 0）表示不限制监听器的数量。</p>
+<h3 id="查看事件绑定的监听器个数"><a class="markdownIt-Anchor" href="#查看事件绑定的监听器个数"></a> 查看事件绑定的监听器个数</h3>
+<p><code>emitter.listenerCount(eventName)</code></p>
+<h2 id="error事件"><a class="markdownIt-Anchor" href="#error事件"></a> error事件</h2>
+<p>当 EventEmitter 实例出错时，应该触发 ‘error’ 事件。</p>
+<p>如果没有为 ‘error’ 事件注册监听器，则当 ‘error’ 事件触发时，会抛出错误、打印堆栈跟踪、并退出 Node.js 进程。</p>
+<p>通常我们要为会触发 error 事件的对象设置监听器，避免遇到错误后整个程序崩溃。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> events = <span class="built_in">require</span>(<span class="string">'events'</span>);</span><br><span class="line"><span class="keyword">var</span> emitter = <span class="keyword">new</span> events.EventEmitter();</span><br><span class="line">emitter.on(<span class="string">'error'</span>,(err)=&gt;&#123;</span><br><span class="line">	<span class="built_in">console</span>.error(<span class="string">'错误'</span>);</span><br><span class="line">&#125;);</span><br><span class="line">emitter.emit(<span class="string">'error'</span>);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -717,7 +824,7 @@ require 得到的是 module.exports 导出的值，导出多个成员可以用 m
   <p><span>本文标题:</span><a href="/2019/07/24/Node-js学习笔记-一/">Node.js学习笔记(一)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Hooo Jerry 的个人博客">Hooo Jerry</a></p>
   <p><span>发布时间:</span>2019年07月24日 - 22:50</p>
-  <p><span>最后更新:</span>2019年07月25日 - 17:49</p>
+  <p><span>最后更新:</span>2019年07月26日 - 22:47</p>
   <p><span>原始链接:</span><a href="/2019/07/24/Node-js学习笔记-一/" title="Node.js学习笔记(一)">http://hoooJerry.com/2019/07/24/Node-js学习笔记-一/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://hoooJerry.com/2019/07/24/Node-js学习笔记-一/" aria-label="复制成功！"></i></span>
   </p>
@@ -967,7 +1074,7 @@ require 得到的是 module.exports 导出的值，导出多个成员可以用 m
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs适用场景"><span class="nav-number">1.</span> <span class="nav-text"> Node.js适用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局对象"><span class="nav-number">2.</span> <span class="nav-text"> 全局对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局变量"><span class="nav-number">2.1.</span> <span class="nav-text"> 全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见全局变量和全局函数"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 常见全局变量和全局函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#require方法创建hello-world"><span class="nav-number">3.</span> <span class="nav-text"> require方法–创建hello world</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs包"><span class="nav-number">4.</span> <span class="nav-text"> Node.js包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs模块"><span class="nav-number">5.</span> <span class="nav-text"> Node.js模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs函数"><span class="nav-number">6.</span> <span class="nav-text"> Node.js函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名函数"><span class="nav-number">6.1.</span> <span class="nav-text"> 匿名函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#箭头函数"><span class="nav-number">6.1.1.</span> <span class="nav-text"> 箭头函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs-异步编程"><span class="nav-number">6.2.</span> <span class="nav-text"> Node.js 异步编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞代码"><span class="nav-number">6.2.1.</span> <span class="nav-text"> 阻塞代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞代码"><span class="nav-number">6.2.2.</span> <span class="nav-text"> 非阻塞代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs事件"><span class="nav-number">7.</span> <span class="nav-text"> Node.js事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eventemitter"><span class="nav-number">7.1.</span> <span class="nav-text"> EventEmitter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加监听器"><span class="nav-number">7.1.1.</span> <span class="nav-text"> 添加监听器</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs适用场景"><span class="nav-number">1.</span> <span class="nav-text"> Node.js适用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局对象"><span class="nav-number">2.</span> <span class="nav-text"> 全局对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局变量"><span class="nav-number">2.1.</span> <span class="nav-text"> 全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见全局变量和全局函数"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 常见全局变量和全局函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#require方法创建hello-world"><span class="nav-number">3.</span> <span class="nav-text"> require方法–创建hello world</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs包"><span class="nav-number">4.</span> <span class="nav-text"> Node.js包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs模块"><span class="nav-number">5.</span> <span class="nav-text"> Node.js模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs函数"><span class="nav-number">6.</span> <span class="nav-text"> Node.js函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名函数"><span class="nav-number">6.1.</span> <span class="nav-text"> 匿名函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#箭头函数"><span class="nav-number">6.1.1.</span> <span class="nav-text"> 箭头函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs-异步编程"><span class="nav-number">6.2.</span> <span class="nav-text"> Node.js 异步编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞代码"><span class="nav-number">6.2.1.</span> <span class="nav-text"> 阻塞代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非阻塞代码"><span class="nav-number">6.2.2.</span> <span class="nav-text"> 非阻塞代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步打开文件"><span class="nav-number">6.2.3.</span> <span class="nav-text"> 异步打开文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nodejs事件"><span class="nav-number">7.</span> <span class="nav-text"> Node.js事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eventemitter"><span class="nav-number">7.1.</span> <span class="nav-text"> EventEmitter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加监听器"><span class="nav-number">7.1.1.</span> <span class="nav-text"> 添加监听器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移除监听器"><span class="nav-number">7.1.2.</span> <span class="nav-text"> 移除监听器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置监听器最大绑定数"><span class="nav-number">7.1.3.</span> <span class="nav-text"> 设置监听器最大绑定数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看事件绑定的监听器个数"><span class="nav-number">7.1.4.</span> <span class="nav-text"> 查看事件绑定的监听器个数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#error事件"><span class="nav-number">7.2.</span> <span class="nav-text"> error事件</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1012,7 +1119,7 @@ require 得到的是 module.exports 导出的值，导出多个成员可以用 m
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共12.1k字</span>
+  <span class="post-count">博客全站共13.5k字</span>
 </div></div>
         
 <div class="busuanzi-count">
